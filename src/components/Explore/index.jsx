@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Footer from "../footer/Footer";
 import Allprofile from "./allprofile";
-import Newmatches from "./newmatches";
+import Newmatches from "./newmatch";
+import Location from "./location";
 import "./navbar.css";
 
 const DefaultSlider = () => {
@@ -58,9 +59,9 @@ const DefaultSlider = () => {
         <div className="row swiper-slider-component">
           {activeTab === "all" && <Allprofile />}
           {activeTab === "new" && <Newmatches />}
-          {activeTab === "new1" && <Newmatches />}
-          {activeTab === "new2" && <Newmatches />}
-          {activeTab === "new3" && <Newmatches />}
+          {activeTab === "new1" && <Location />}
+          {activeTab === "new2" && <Location />}
+          {activeTab === "new3" && <Location />}
         </div>
 
         <Footer />

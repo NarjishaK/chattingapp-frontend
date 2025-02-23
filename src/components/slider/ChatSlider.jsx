@@ -54,55 +54,19 @@ const ChatSlider = () => {
       >
         <SwiperSlide className="single-member">
             <button className="btn-flush avatar">
-                <img src="assets/images/avatar-2.png" alt="User"/>
+                <img src="https://www.w3schools.com/w3images/avatar2.png" alt="User"/>
                 <span className="active-status active"></span>
             </button>
         </SwiperSlide>
         <SwiperSlide className="single-member">
             <button className="btn-flush avatar">
-                <img src="assets/images/avatar-3.png" alt="User"/>
+                <img src="https://www.w3schools.com/w3images/avatar2.png" alt="User"/>
                 <span className="active-status active"></span>
             </button>
         </SwiperSlide>
         <SwiperSlide className="single-member">
             <button className="btn-flush avatar">
-                <img src="assets/images/avatar-4.png" alt="User"/>
-                <span className="active-status active"></span>
-            </button>
-        </SwiperSlide>
-        <SwiperSlide className="single-member">
-            <button className="btn-flush avatar">
-                <img src="assets/images/avatar-5.png" alt="User"/>
-                <span className="active-status active"></span>
-            </button>
-        </SwiperSlide>
-        <SwiperSlide className="single-member">
-            <button className="btn-flush avatar">
-                <img src="assets/images/avatar-6.png" alt="User"/>
-                <span className="active-status active"></span>
-            </button>
-        </SwiperSlide>
-        <SwiperSlide className="single-member">
-            <button className="btn-flush avatar">
-                <img src="assets/images/avatar.png" alt="User"/>
-                <span className="active-status active"></span>
-            </button>
-        </SwiperSlide>
-        <SwiperSlide className="single-member">
-            <button className="btn-flush avatar">
-                <img src="assets/images/avatar-2.png" alt="User"/>
-                <span className="active-status active"></span>
-            </button>
-        </SwiperSlide>
-        <SwiperSlide className="single-member">
-            <button className="btn-flush avatar">
-                <img src="assets/images/avatar-3.png" alt="User"/>
-                <span className="active-status active"></span>
-            </button>
-        </SwiperSlide>
-        <SwiperSlide className="single-member">
-            <button className="btn-flush avatar">
-                <img src="assets/images/avatar-4.png" alt="User"/>
+                <img src="https://www.w3schools.com/w3images/avatar2.png" alt="User"/>
                 <span className="active-status active"></span>
             </button>
         </SwiperSlide>
@@ -114,7 +78,19 @@ const ChatSlider = () => {
         </SwiperSlide>
         <SwiperSlide className="single-member">
             <button className="btn-flush avatar">
-                <img src="assets/images/avatar-6.png" alt="User"/>
+                <img src="https://www.w3schools.com/w3images/avatar2.png" alt="User"/>
+                <span className="active-status active"></span>
+            </button>
+        </SwiperSlide>
+        <SwiperSlide className="single-member">
+            <button className="btn-flush avatar">
+                <img src="https://www.w3schools.com/w3images/avatar2.png" alt="User"/>
+                <span className="active-status active"></span>
+            </button>
+        </SwiperSlide>
+        <SwiperSlide className="single-member">
+            <button className="btn-flush avatar">
+                <img src="https://www.w3schools.com/w3images/avatar2.png" alt="User"/>
                 <span className="active-status active"></span>
             </button>
         </SwiperSlide>

@@ -61,14 +61,14 @@ const MainSidebar = () => {
           <OverlayScrollbarsComponent className="sidebar-menu">
             <DashboardPart />
             <AppsPart />
-            <PagesPart />
+            {/* <PagesPart /> */}
             <ComponentsPart />
           </OverlayScrollbarsComponent>
         ) : (
           <>
             <DashboardPart />
             <AppsPart />
-            <PagesPart />
+            {/* <PagesPart /> */}
             <ComponentsPart />
           </>
         )}

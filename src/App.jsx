@@ -59,6 +59,7 @@ import AllProfile from "./components/Explore/index"
 //
 import StockList from "./pages/Stocklist"
 import Salesorders from "./pages/salesorders"
+import Chattingpage from "./pages/chatingpage"
 function App() {
   
   return (
@@ -67,6 +68,7 @@ function App() {
         <Route element={<Layout/>}>
           <Route path="/" element={<Dashboard/>}/>
           <Route path="/allprofile" element={<AllProfile/>}/>
+          <Route path="/chattingpage" element={<Chattingpage/>}/>
           <Route path="/stocklist" element={<StockList/>}/>
           <Route path="/salesorders" element={<Salesorders/>}/>
           <Route path="/fileManager" element={<FileManager/>}/>

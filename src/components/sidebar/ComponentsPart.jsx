@@ -58,7 +58,7 @@ const ComponentsPart = () => {
           <span className="sidebar-txt">Advance UI</span>
         </Link>
         <ul className={`sidebar-dropdown-menu ${advance && isSubComponentDropdownOpen ? 'd-block' : ''}`}>
-          <li className="sidebar-dropdown-item">
+          {/* <li className="sidebar-dropdown-item">
             <NavLink to="/sweetAlert" className="sidebar-link" onClick={handleSubNavLinkClick}>
               Sweet Alert
             </NavLink>
@@ -67,7 +67,7 @@ const ComponentsPart = () => {
             <NavLink to="/nestableList" className="sidebar-link" onClick={handleSubNavLinkClick}>
               Nestable List
             </NavLink>
-          </li>
+          </li> */}
           <li className="sidebar-dropdown-item">
             <NavLink to="/animation" className="sidebar-link" onClick={handleSubNavLinkClick}>
               Animation
@@ -78,9 +78,17 @@ const ComponentsPart = () => {
               Swiper Slider
             </NavLink>
             </li>
+            <li className="sidebar-dropdown-item">
+              <NavLink to="/pricingTable2" className="sidebar-link">
+              <span className="nav-icon">
+              <i className="fa-light fa-layer-group"></i>
+            </span>{' '}
+            <span className="sidebar-txt">Pricing Table</span>
+              </NavLink>
+            </li>
           </ul>
         </li>
-        <li className="sidebar-dropdown-item">
+        {/* <li className="sidebar-dropdown-item">
           <NavLink to="/form" className="sidebar-link">
             <span className="nav-icon">
               <i className="fa-light fa-memo-pad"></i>
@@ -95,8 +103,8 @@ const ComponentsPart = () => {
             </span>{' '}
             <span className="sidebar-txt">Tables</span>
           </NavLink>
-        </li>
-        <li className="sidebar-dropdown-item">
+        </li> */}
+        {/* <li className="sidebar-dropdown-item">
           <NavLink to="/charts" className="sidebar-link">
             <span className="nav-icon">
               <i className="fa-light fa-chart-simple"></i>
@@ -119,7 +127,7 @@ const ComponentsPart = () => {
             </span>{' '}
             <span className="sidebar-txt">Maps</span>
           </NavLink>
-        </li>
+        </li> */}
         <li className="sidebar-dropdown-item">
           <NavLink to="/fileManager" className="sidebar-link">
             <span className="nav-icon">

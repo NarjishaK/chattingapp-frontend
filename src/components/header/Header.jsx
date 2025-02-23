@@ -39,19 +39,20 @@ const Header = () => {
           <div className="main-logo d-lg-block d-none">
             <div className="logo-big">
               <Link to="/">
-                <img
+                {/* <img
                   src={`${
                     isLightTheme
                       ? "assets/images/logo-black.png"
                       : "assets/images/logo-big.png"
                   }`}
                   alt="Logo"
-                />
+                /> */}
+                <b style={{color:"green"}}>CHATTER APP</b>
               </Link>
             </div>
             <div className="logo-small">
               <Link to="/">
-                <img src="assets/images/logo-small.png" alt="Logo" />
+              <b style={{color:"green"}}>CA</b>
               </Link>
             </div>
           </div>
@@ -66,25 +67,26 @@ const Header = () => {
               </button>
             )}
           </div>
-          <Link
+          {/* <Link
             to="/"
             target="_blank"
             className="btn btn-sm btn-primary site-view-btn"
           >
             <i className="fa-light fa-globe me-1"></i> <span>Dashboard</span>
-          </Link>
+          </Link> */}
         </div>
         <div className="col-4 d-lg-none">
           {isLightTheme ? (
             <div className="mobile-logo">
               <Link to="/">
-                <img src="assets/images/logo-black.png" alt="Logo" />
+              <b style={{color:"green"}}>CHATTER APP</b>
               </Link>
             </div>
           ) : (
             <div className="mobile-logo">
               <Link to="/">
-                <img src="assets/images/logo-big.png" alt="Logo" />
+                {/* <img src="assets/images/logo-big.png" alt="Logo" /> */}
+                <b style={{color:"green"}}>CHATTER APP</b>
               </Link>
             </div>
           )}

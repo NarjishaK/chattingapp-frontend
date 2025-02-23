@@ -34,18 +34,26 @@ const AppsPart = () => {
   };
   return (
     <li className="sidebar-item" ref={isExpanded || isNavExpanded.isSmall || layoutPosition.horizontal || (layoutPosition.twoColumn && isExpanded) || (layoutPosition.twoColumn && isSmallScreen) ? mainAppsDropdownRef : null}>
-      <Link
+      {/* <Link
         role="button"
         className={`sidebar-link-group-title has-sub ${isMainDropdownOpen ? 'show' : ''}`}
         onClick={toggleMainDropdown}
       >
         Apps
-      </Link>
+      </Link> */}
+      <li className="sidebar-dropdown-item">
+          <NavLink to="/chattingpage" className="sidebar-link">
+            <span className="nav-icon">
+              <i className="fa-light fa-messages"></i>
+            </span>{' '}
+            <span className="sidebar-txt">Chat</span>
+          </NavLink>
+        </li>
       <ul className={`sidebar-link-group 
       ${layoutPosition.horizontal ? (dropdownOpen.apps ? 'd-block' : 'd-none') : (isMainDropdownOpen ? 'd-none' : '')}
       `}>       
 
-        <li className="sidebar-dropdown-item" >
+        {/* <li className="sidebar-dropdown-item" >
           <Link
             role="button"
             className={`sidebar-link has-sub ${isCrmDropdownOpen ? 'show' : ''}`}
@@ -122,19 +130,9 @@ const AppsPart = () => {
                 All Employee
               </NavLink>
             </li>
-            {/* <li className="sidebar-dropdown-item">
-              <NavLink to="/addEmployee" className="sidebar-link" onClick={handleSubNavLinkClick}>
-                Add Employee
-              </NavLink>
-            </li> */}
-            {/* <li className="sidebar-dropdown-item">
-              <NavLink to="/attendance" className="sidebar-link" onClick={handleSubNavLinkClick}>
-                Attendance
-              </NavLink>
-            </li> */}
           </ul>
-        </li>
-        <li className="sidebar-dropdown-item">
+        </li> */}
+        {/* <li className="sidebar-dropdown-item">
           <Link
             role="button"
             className={`sidebar-link has-sub ${isEcommerceDropdownOpen ? 'show' : ''}`}
@@ -152,11 +150,6 @@ const AppsPart = () => {
             id="ecommerceDropdown"
 
           >
-            {/* <li className="sidebar-dropdown-item">
-              <NavLink to="/addNewProduct" className="sidebar-link" onClick={handleSubNavLinkClick}>
-                Add Product
-              </NavLink>
-            </li> */}
             <li className="sidebar-dropdown-item">
               <NavLink to="/allProduct" className="sidebar-link" onClick={handleSubNavLinkClick}>
                 All Product
@@ -169,9 +162,9 @@ const AppsPart = () => {
             </li>
 
           </ul>
-        </li>
+        </li> */}
 
-        <li className="sidebar-dropdown-item">
+        {/* <li className="sidebar-dropdown-item">
           <Link
             role="button"
             className={`sidebar-link has-sub ${isAccountsDropdownOpen ? 'show' : ''}`}
@@ -194,7 +187,7 @@ const AppsPart = () => {
             </NavLink>
           </li>
           </ul>
-        </li>
+        </li> */}
 
         {/* <li className="sidebar-dropdown-item">
             <NavLink to="/task" className="sidebar-link" onClick={handleSubNavLinkClick}>
@@ -202,7 +195,7 @@ const AppsPart = () => {
             </NavLink>
           </li> */}
 
-        <li className="sidebar-dropdown-item">
+        {/* <li className="sidebar-dropdown-item">
           <NavLink to="/task" className="sidebar-link">
             <span className="nav-icon">
               <i className="fa-light fa-calendar"></i>
@@ -217,15 +210,8 @@ const AppsPart = () => {
             </span>{' '}
             <span className="sidebar-txt">Calendar</span>
           </NavLink>
-        </li>
-        <li className="sidebar-dropdown-item">
-          <NavLink to="/chat" className="sidebar-link">
-            <span className="nav-icon">
-              <i className="fa-light fa-messages"></i>
-            </span>{' '}
-            <span className="sidebar-txt">Chat</span>
-          </NavLink>
-        </li>
+        </li> */}
+       
         <li className="sidebar-dropdown-item">
           <NavLink to="/email" className="sidebar-link">
             <span className="nav-icon">
@@ -234,7 +220,7 @@ const AppsPart = () => {
             <span className="sidebar-txt">Email</span>
           </NavLink>
         </li>
-        <li className="sidebar-dropdown-item">
+        {/* <li className="sidebar-dropdown-item">
           <NavLink to="/invoices" className="sidebar-link">
             <span className="nav-icon">
               <i className="fa-light fa-file-invoice"></i>
@@ -249,7 +235,7 @@ const AppsPart = () => {
             </span>{' '}
             <span className="sidebar-txt">Contacts</span>
           </NavLink>
-        </li>
+        </li> */}
       </ul>
     </li>
   );
