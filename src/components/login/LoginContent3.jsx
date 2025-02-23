@@ -19,7 +19,9 @@ const LoginContent3 = () => {
             <div className="login-body">
                 <div className="top d-flex justify-content-between align-items-center">
                     <div className="logo">
-                    <img src={ "assets/images/logo-black.png"} alt="Logo"/>
+                    {/* <img src={ "assets/images/logo-black.png"} alt="Logo"/> */}
+                    <b style={{color:"green"}}>CHATTER APP</b>
+
                     </div>
                     <Link to="/"><i className="fa-duotone fa-house-chimney"></i></Link>
                 </div>

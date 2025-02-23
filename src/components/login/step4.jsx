@@ -10,8 +10,10 @@ const Step3 = () => {
 
       <div className="bottom">
         <form>
-        <div className="input-group mb-25">
-            <span className="input-group-text">
+        <div className="row g-3">
+            <div className="col-sm-6">
+              <div className="input-group">
+              <span className="input-group-text">
               <i className="fa-regular fa-globe"></i>
             </span>
             <select className="form-select">
@@ -20,9 +22,12 @@ const Step3 = () => {
               <option value="2">Two</option>
               <option value="3">Three</option>
             </select>
-          </div> <div className="input-group mb-25">
-            <span className="input-group-text">
-              <i className="fa-regular fa-globe"></i>
+              </div>
+            </div>
+            <div className="col-sm-6">
+              <div className="input-group">
+              <span className="input-group-text">
+              <i className="fa-regular fa-book"></i>
             </span>
             <select className="form-select">
               <option selected>Course</option>
@@ -30,18 +35,42 @@ const Step3 = () => {
               <option value="2">Two</option>
               <option value="3">Three</option>
             </select>
+                </div>
+            </div>
           </div>
-          <div className="input-group mb-25">
+          <br />
+
+          <div className="input-group mb-20">
             <span className="input-group-text">
-              <i className="fa-regular fa-globe"></i>
+              <i className="fa-regular fa-calendar"></i>
             </span>
-            <select className="form-select">
+            <input type="date" className="form-control" placeholder="Present" value="present" />
+            </div>
+
+            <div className="row g-3">
+            <div className="col-sm-6">
+              <div className="input-group">
+              <span className="input-group-text">
+              <i className="fa-regular fa-computer"></i>
+            </span>
+            <select className="form-select" style={{height:"49px"}}>
               <option selected>profession</option>
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
             </select>
+              </div>
+            </div>
+            <div className="col-sm-6">
+              <div className="input-group">
+              <span className="input-group-text">
+              <i className="fa-regular fa-location"></i>
+            </span>
+            <input type="text" className="form-control" placeholder="Location" />
+                </div>
+            </div>
           </div>
+          <br />
 
           <div className="input-group mb-25">
             <span className="input-group-text">

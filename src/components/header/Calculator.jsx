@@ -13,9 +13,9 @@ const Calculator = () => {
     <div className="header-btn-box">
         <div className="dropdown" ref={calculatorRef}>
             <button className={`header-btn ${calculatorShow? 'show':''}`} onClick={handleCalculator}>
-                <i className="fa-light fa-calculator"></i>
+                <i className="fa-light fa-phone"></i>
             </button>
-            <ul className={`dropdown-menu calculator-dropdown ${calculatorShow? 'show':''}`}>
+            {/* <ul className={`dropdown-menu calculator-dropdown ${calculatorShow? 'show':''}`}>
                 <div className="dgb-calc-box">
                     <div>
                     <input
@@ -60,7 +60,7 @@ const Calculator = () => {
                         </tbody>
                     </table>
                 </div>
-            </ul>
+            </ul> */}
         </div>
     </div>
   )

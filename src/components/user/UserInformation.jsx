@@ -30,7 +30,7 @@ const UserInformation = () => {
         <div className="panel-body">
             <div className="profile-sidebar">
                 <div className="d-flex justify-content-between align-items-center">
-                    <h5 className="profile-sidebar-title">User Information</h5>
+                    <h5 className="profile-sidebar-title">Your Information</h5>
                     <div className="dropdown" ref={headerRef}>
                         <button className="btn btn-sm btn-icon btn-outline-primary" onClick={handleDropdownBtn}>
                             <i className="fa-solid fa-ellipsis"></i>
@@ -49,13 +49,7 @@ const UserInformation = () => {
                     </div>
                     <div className="part-txt">
                         <h4 className="admin-name">Mitchell C. Shay</h4>
-                        <span className="admin-role">Graphic Designer</span>
-                        <div className="admin-social">
-                            <Link to="#"><i className="fa-brands fa-facebook-f"></i></Link>
-                            <Link to="#"><i className="fa-brands fa-twitter"></i></Link>
-                            <Link to="#"><i className="fa-brands fa-google"></i></Link>
-                            <Link to="#"><i className="fa-brands fa-instagram"></i></Link>
-                        </div>
+                        <span className="admin-role">Muslim</span>
                     </div>
                 </div>
                 <div className="bottom">
@@ -64,11 +58,16 @@ const UserInformation = () => {
                         <li><span>Full Name:</span>Anna Adame</li>
                         <li><span>Mobile:</span>+(1) 987 65433</li>
                         <li><span>Mail:</span>example@mail.com</li>
-                        <li><span>Address:</span>California, United States</li>
-                        <li><span>Joining Date:</span>24 Nov 2022</li>
+                        <li><span>Nationality:</span>India</li>
+                        <li><span>Location:</span>Kerala, Kuttiady</li>
+                        <li><span>Date of Birth:</span>24 Nov 2022</li>
+                        <li><span>Marital Status:</span>Married</li>
+                        <li><span>Height & Weight:</span>158cm,  46kl</li>
+                        <li><span>Physically Challenged:</span>No</li>
+                        <li><span>Financial Status:</span>Wealthy Family</li>
                     </ul>
-                    <h6 className="profile-sidebar-subtitle">About Me</h6>
-                    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets</p>
+                    {/* <h6 className="profile-sidebar-subtitle">About Me</h6>
+                    <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets</p> */}
                 </div>
             </div>
         </div>

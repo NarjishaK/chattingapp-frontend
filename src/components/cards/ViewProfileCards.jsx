@@ -7,14 +7,13 @@ const ViewProfileCards = () => {
         <div className="col-lg-4">
             <div className="dashboard-top-box rounded-bottom panel-bg">
                 <div className="left">
-                    <h3>$34,152</h3>
-                    <p>Shipping fees are not</p>
-                    <Link to="#">View net earnings</Link>
+                    <p>Following</p>
+                    <Link to="#">View Following</Link>
                 </div>
                 <div className="right">
-                    <span className="text-primary">+16.24%</span>
+                    <span className="text-primary">200</span>
                     <div className="part-icon rounded">
-                        <span><i className="fa-light fa-dollar-sign"></i></span>
+                        <span><i className="fa-light fa-user"></i></span>
                     </div>
                 </div>
             </div>
@@ -22,14 +21,13 @@ const ViewProfileCards = () => {
         <div className="col-lg-4 col-6 col-xs-12">
             <div className="dashboard-top-box rounded-bottom panel-bg">
                 <div className="left">
-                    <h3>36,894</h3>
-                    <p>Orders</p>
-                    <Link to="#">Excluding orders in transit</Link>
+                    <p>Follower</p>
+                    <Link to="#">View Follower</Link>
                 </div>
                 <div className="right">
-                    <span className="text-primary">+16.24%</span>
+                    <span className="text-primary">123</span>
                     <div className="part-icon rounded">
-                        <span><i className="fa-light fa-bag-shopping"></i></span>
+                        <span><i className="fa-light fa-user"></i></span>
                     </div>
                 </div>
             </div>
@@ -37,12 +35,11 @@ const ViewProfileCards = () => {
         <div className="col-lg-4 col-6 col-xs-12">
             <div className="dashboard-top-box rounded-bottom panel-bg">
                 <div className="left">
-                    <h3>$34,152</h3>
-                    <p>Customers</p>
-                    <Link to="#">See details</Link>
+                    <p>Pending Request</p>
+                    <Link to="#">See Pending Request</Link>
                 </div>
                 <div className="right">
-                    <span className="text-primary">+16.24%</span>
+                    <span className="text-primary">5</span>
                     <div className="part-icon rounded">
                         <span><i className="fa-light fa-user"></i></span>
                     </div>

@@ -2,7 +2,8 @@ import React from 'react'
 import Footer from '../components/footer/Footer'
 import UserInformation from '../components/user/UserInformation'
 import ViewProfileCards from '../components/cards/ViewProfileCards'
-import UserActivity from '../components/user/UserActivity'
+import UserActivity from '../components/user/UserActivity' 
+import Allprofile from "../components/Explore/newmatch"
 
 const ProfileMainContent = () => {
   return (
@@ -19,6 +20,9 @@ const ProfileMainContent = () => {
                 <ViewProfileCards/>
                 <UserActivity/>
             </div>
+            <hr/>
+            <b style={{textAlign:"center"}}>Your Posts</b>
+            <Allprofile/>
         </div>
 
         <Footer/>

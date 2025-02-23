@@ -19,7 +19,7 @@ const EditProfileContent = () => {
                 </button>
               </div>
               <span className="admin-name">Mitchell C. Shay</span>
-              <span className="admin-role">Graphic Designer</span>
+              <span className="admin-role">Muslim</span>
             </div>
           </div>
           <div className="col-md-9">
@@ -89,15 +89,9 @@ const EditProfileContent = () => {
                 <i className="fa-light fa-user-tie" />
               </span>
               <select className="form-control select-search" defaultValue="">
-                <option value="">Role</option>
-                <option value="0">Admin</option>
-                <option value="1">Manager</option>
-                <option value="2">Project Manager</option>
-                <option value="3">Managing Director</option>
-                <option value="4">Chairman</option>
-                <option value="5" defaultValue>
-                  Graphic Designer
-                </option>
+                <option value="">Religion</option>
+                <option value="0">Muslim</option>
+                <option value="1">Hindu</option>
               </select>
             </div>
           </div>
@@ -115,21 +109,19 @@ const EditProfileContent = () => {
               </select>
             </div>
           </div>
-          <div className="col-md-4 col-sm-6">
+          <div className="col-md-6 col-sm-6">
             <div className="input-group">
               <span className="input-group-text">
-                <i className="fa-light fa-envelope" />
+                <i className="fa-light fa-user" />
               </span>
-              <input
-                type="email"
-                className="form-control"
-                placeholder="Email"
-                value="example@mail.com"
-                readOnly
-              />
+              <select className="form-control select-search" defaultValue="">
+                <option value="">Marital status</option>
+                <option value="0">Married</option>
+                <option value="1">Single</option>
+              </select>
             </div>
           </div>
-          <div className="col-md-4 col-sm-6">
+          <div className="col-md-6 col-sm-6">
             <div className="input-group">
               <span className="input-group-text">
                 <i className="fa-light fa-phone" />
@@ -143,40 +135,145 @@ const EditProfileContent = () => {
               />
             </div>
           </div>
+          <div className="col-md-6 col-sm-6">
+            <div className="input-group">
+              <span className="input-group-text">
+                <i className="fa-light fa-location" />
+              </span>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Location"
+                readOnly
+              />
+            </div>
+          </div>
+          <div className="col-md-6 col-sm-6">
+            <div className="input-group">
+              <span className="input-group-text">
+               <b>DOB</b>
+              </span>
+              <input
+                type="date"
+                className="form-control"
+                readOnly
+              />
+            </div>
+          </div>
           <div className="col-md-4 col-sm-6">
             <div className="input-group">
               <span className="input-group-text">
-                <i className="fa-light fa-globe" />
+                <i className="fa-light fa-flag" />
+              </span>
+              <select className="form-control select-search" defaultValue="">
+                <option value="">Nationality</option>
+                <option value="0">India</option>
+                <option value="1">Afganistan</option>
+              </select>
+            </div>
+          </div>
+          <div className="col-md-4 col-sm-6">
+            <div className="input-group">
+              <span className="input-group-text">
+                <i className="fa-light fa-map" />
+              </span>
+              <select className="form-control select-search" defaultValue="">
+                <option value="">Destrict</option>
+                <option value="0">Kerala</option>
+                <option value="1">Uthar Predhesh</option>
+              </select>
+            </div>
+          </div>
+          <div className="col-md-4 col-sm-6">
+            <div className="input-group">
+              <span className="input-group-text">
+                <i className="fa-light fa-coins" />
+              </span>
+              <select className="form-control select-search" defaultValue="">
+                <option value="">Financial status</option>
+                <option value="0">Wealthy Family</option>
+                <option value="1">Middle class</option>
+              </select>
+            </div>
+          </div>
+          <div className="col-md-4 col-sm-6">
+            <div className="input-group">
+              <span className="input-group-text">
+                <i className="fa-light fa-wheelchair" />
+              </span>
+              <select className="form-control select-search" defaultValue="">
+                <option value="">Physically Challenged</option>
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+              </select>
+            </div>
+          </div>
+          <div className="col-md-2 col-sm-3">
+            <div className="input-group">
+              <span className="input-group-text">
+                <i className="fa-light fa-meter" />
               </span>
               <input
-                type="url"
+                type="text"
                 className="form-control"
-                placeholder="Website"
-                value="https://themeforest.net/"
+                placeholder="Height"
                 readOnly
               />
             </div>
           </div>
-          <div className="col-12">
-            <textarea className="form-control h-100-p" placeholder="Address" value="California, United States" readOnly/>
+          <div className="col-md-2 col-sm-3">
+            <div className="input-group">
+              <span className="input-group-text">
+                <i className="fa-light fa-weight" />
+              </span>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Weight"
+                readOnly
+              />
+            </div>
           </div>
+          <br/>
         </div>
       </div>
       <div className="profile-edit-tab-title">
-        <h6>Social Information</h6>
+        <h6>Basic Information</h6>
       </div>
       <div className="social-information">
         <div className="row g-3">
-          <div className="col-sm-6">
+          <div className="col-sm-4">
             <div className="input-group">
               <span className="input-group-text">
-                <i className="fa-brands fa-facebook-f" />
+                <i className="fa-light fa-books" />
+              </span>
+              <select className="form-control select-search" defaultValue="">
+                <option value="">Higher Education </option>
+                <option value="0">Degree</option>
+                <option value="1">Plus 2</option>
+              </select>
+            </div>
+          </div>
+          <div className="col-sm-4">
+            <div className="input-group">
+              <span className="input-group-text">
+                <i className="fa-light fa-book " />
+              </span>
+              <select className="form-control select-search" defaultValue="">
+                <option value="">Course</option>
+                <option value="0">BA</option>
+                <option value="1">BBA</option>
+              </select>
+            </div>
+          </div>
+          <div className="col-sm-4">
+            <div className="input-group">
+              <span className="input-group-text">
+                <i className="fa-light fa-calendar" />
               </span>
               <input
-                type="url"
+                type="date"
                 className="form-control"
-                placeholder="Facebook"
-                value="https://www.facebook.com/"
                 readOnly
               />
             </div>
@@ -184,69 +281,23 @@ const EditProfileContent = () => {
           <div className="col-sm-6">
             <div className="input-group">
               <span className="input-group-text">
-                <i className="fa-brands fa-twitter" />
+                <i className="fa-light fa-computer " />
               </span>
-              <input
-                type="url"
-                className="form-control"
-                placeholder="Twitter"
-                value="https://twitter.com/"
-                readOnly
-              />
+              <select className="form-control select-search" defaultValue="">
+                <option value="">Profession</option>
+                <option value="0">Web Developer</option>
+              </select>
             </div>
           </div>
           <div className="col-sm-6">
             <div className="input-group">
               <span className="input-group-text">
-                <i className="fa-brands fa-linkedin-in" />
+                <i className="fa-light fa-location" />
               </span>
               <input
-                type="url"
+                type="text"
                 className="form-control"
-                placeholder="Linkedin"
-                value="https://www.linkedin.com/"
-                readOnly
-              />
-            </div>
-          </div>
-          <div className="col-sm-6">
-            <div className="input-group">
-              <span className="input-group-text">
-                <i className="fa-brands fa-instagram" />
-              </span>
-              <input
-                type="url"
-                className="form-control"
-                placeholder="Instagram"
-                value="https://www.instagram.com/"
-                readOnly
-              />
-            </div>
-          </div>
-          <div className="col-sm-6">
-            <div className="input-group">
-              <span className="input-group-text">
-                <i className="fa-brands fa-youtube" />
-              </span>
-              <input
-                type="url"
-                className="form-control"
-                placeholder="Youtube"
-                value="https://www.youtube.com/"
-                readOnly
-              />
-            </div>
-          </div>
-          <div className="col-sm-6">
-            <div className="input-group">
-              <span className="input-group-text">
-                <i className="fa-brands fa-pinterest-p" />
-              </span>
-              <input
-                type="url"
-                className="form-control"
-                placeholder="Pinterest"
-                value="https://www.pinterest.com/"
+                placeholder='Address'
                 readOnly
               />
             </div>

@@ -60,7 +60,6 @@ const DashboardPart = () => {
             <span className="sidebar-txt">View Your Profile</span>
           </NavLink>
         </li>
-        <br />
 
         {/* <li className="sidebar-dropdown-item">
           <NavLink to="/" className="sidebar-link">
