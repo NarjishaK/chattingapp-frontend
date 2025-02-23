@@ -9,14 +9,22 @@ const DashboardPart = () => {
   } = dashState;
   return (
     <li className='sidebar-item open' ref={layoutPosition.horizontal? mainDashboardRef : null}>
-      <Link
+      {/* <Link
         role="button"
         className={`sidebar-link-group-title has-sub ${isMainDropdownOpen ? 'show' : ''}`}
         onClick={toggleMainDashDropdown}
       >
         Dashboard
-      </Link>
+      </Link> */}
       <ul className={`sidebar-link-group ${layoutPosition.horizontal ? (dropdownOpen.dashboard ? 'd-block' : '') : (isMainDropdownOpen ? 'd-none' : '')}`}>       
+       <li className="sidebar-dropdown-item" style={{backgroundColor:'green' }}>
+          <NavLink to="/allprofile" className="sidebar-link">
+            <span className="nav-icon">
+              <i className="fa-light fa-user" style={{color:"white"}}></i>
+            </span>{' '}
+            <span className="sidebar-txt" style={{color:"white"}} >Profile</span>
+          </NavLink>
+        </li>
        <li className="sidebar-dropdown-item">
           <NavLink to="/" className="sidebar-link">
             <span className="nav-icon">

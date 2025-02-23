@@ -54,7 +54,7 @@ import ComingSoon2 from "./pages/ComingSoon2"
 // import PricingTable from "./pages/PricingTable"
 import PricingTable2 from "./pages/PricingTable2"
 import UnderConstruction from "./pages/UnderConstruction"
-import AllProfile from "./components/Explore/allprofile"
+import AllProfile from "./components/Explore/index"
 
 //
 import StockList from "./pages/Stocklist"
