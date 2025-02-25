@@ -23,7 +23,6 @@ export default function ECommerce() {
                     <MDBTypography tag='h6'>{card.title}</MDBTypography>
                     <div className="d-flex align-items-center justify-content-between mb-3">
                       <p className="small mb-0"><MDBIcon far icon="clock me-2" /> {card.time}</p>
-                      <p className="fw-bold mb-0">{card.price}</p>
                     </div>
                   </div>
                   <div className="d-flex align-items-center mb-4">
@@ -38,26 +37,19 @@ export default function ECommerce() {
                     <div className="flex-grow-1 ms-3">
                       <div className="d-flex flex-row align-items-center mb-2">
                         <p className="mb-0 me-2">{card.username}</p>
-                        <ul className="mb-0 list-unstyled d-flex flex-row" style={{ color: '#1B7B2C' }}>
-                          {[...Array(5)].map((_, i) => (
-                            <li key={i}>
-                              <MDBIcon fas icon="star fa-xs" />
-                            </li>
-                          ))}
-                        </ul>
+                        
                       </div>
                       <div>
-                        <MDBBtn outline color="dark" rounded size="sm">+ Follow</MDBBtn>
-                        <MDBBtn outline color="dark" rounded size="sm">See profile</MDBBtn>
-                        <MDBBtn outline color="dark" floating size="sm"><MDBIcon fas icon="comment" /></MDBBtn>
+                        <button  className="btn btn-primary btn-sm" style={{ backgroundColor: 'black' }}>+ Follow</button>
+                        {/* <MDBBtn outline color="dark" rounded size="sm">See profile</MDBBtn> */}
+                        <button  className="btn btn-primary btn-sm" style={{ backgroundColor: 'black' }}>Message <MDBIcon fas icon="comment" /></button>
                       </div>
                     </div>
                   </div>
                   <hr />
-                  <MDBCardText>{card.comments}</MDBCardText>
-                  <MDBBtn color="success" rounded block size="lg">
-                    <MDBIcon far icon="clock me-2" /> Book now
-                  </MDBBtn>
+                  <button className="btn btn-primary btn-sm" style={{ backgroundColor: 'green',width:"100%" }}>
+                    <MDBIcon far icon="clock me-2" /> View Now
+                  </button>
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
