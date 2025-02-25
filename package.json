@@ -13,6 +13,7 @@
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^38.0.1",
     "@ckeditor/ckeditor5-react": "^6.0.0",
+    "@cometchat/chat-uikit-react": "^6.0.0",
     "@fullcalendar/core": "^6.1.8",
     "@fullcalendar/daygrid": "^6.1.8",
     "@fullcalendar/interaction": "^6.1.8",
@@ -23,6 +24,7 @@
     "aos": "^2.3.4",
     "dropzone": "^6.0.0-beta.2",
     "font-awesome": "^4.7.0",
+    "lucide-react": "^0.476.0",
     "overlayscrollbars": "^2.2.1",
     "overlayscrollbars-react": "^0.5.0",
     "react": "^18.2.0",
