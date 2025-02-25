@@ -42,6 +42,14 @@ const AppsPart = () => {
         Apps
       </Link> */}
       <li className="sidebar-dropdown-item">
+          <NavLink to="/calllog" className="sidebar-link">
+            <span className="nav-icon">
+              <i className="fa-light fa-phone"></i>
+            </span>{' '}
+            <span className="sidebar-txt">Call History</span>
+          </NavLink>
+        </li>
+      <li className="sidebar-dropdown-item">
           <NavLink to="/chattingpage" className="sidebar-link">
             <span className="nav-icon">
               <i className="fa-light fa-messages"></i>

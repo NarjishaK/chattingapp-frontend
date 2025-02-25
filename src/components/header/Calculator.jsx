@@ -13,7 +13,7 @@ const Calculator = () => {
     <div className="header-btn-box">
         <div className="dropdown" ref={calculatorRef}>
             <button className={`header-btn ${calculatorShow? 'show':''}`} onClick={handleCalculator}>
-                <i className="fa-light fa-phone"></i>
+              <a style={{color: '#000'}} href='/calllog'> <i className="fa-light fa-phone"></i></a> 
             </button>
             {/* <ul className={`dropdown-menu calculator-dropdown ${calculatorShow? 'show':''}`}>
                 <div className="dgb-calc-box">
