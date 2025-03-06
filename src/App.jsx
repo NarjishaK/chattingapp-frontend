@@ -61,9 +61,13 @@ import StockList from "./pages/Stocklist"
 import Salesorders from "./pages/salesorders"
 import Chattingpage from "./pages/chatingpage"
 import CallLogDemo from "./pages/calllog"
+import store from "./components/Redux/store"
+
+import { Provider } from 'react-redux';
 function App() {
   
   return (
+    <Provider store={store}>
     <Router>
       <Routes>
         <Route element={<Layout/>}>
@@ -129,6 +133,7 @@ function App() {
         <Route path="/underConstruction" element={<UnderConstruction/>}/>
       </Routes>
     </Router>
+    </Provider>
   )
 }
 
