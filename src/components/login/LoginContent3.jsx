@@ -29,7 +29,7 @@ const LoginContent3 = () => {
                                 </div>
                                 <Link to="/"><i className="fa-duotone fa-house-chimney"></i></Link>
                             </div>
-                            {/* {step !== 1 && <Stepper currentStep={step - 1} />} */}
+                            {step !== 1 && <Stepper currentStep={step - 1} />}
                             {step === 1 && <Step1 nextStep={nextStep} />}
                             {step === 2 && <Step2 nextStep={nextStep} />}
                             {step === 3 && <Step3 nextStep={nextStep} />}

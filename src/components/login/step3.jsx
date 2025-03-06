@@ -41,7 +41,7 @@ const Step3 = ({ nextStep }) => {
             <div className="col-sm-6">
               <div className="input-group">
                 <input
-                  type="tel"
+                  type="number"
                   className="form-control"
                   placeholder="Height"
                   name="height"
@@ -54,7 +54,7 @@ const Step3 = ({ nextStep }) => {
             <div className="col-sm-6">
               <div className="input-group">
                 <input 
-                  type="tel" 
+                  type="number" 
                   className="form-control" 
                   placeholder="Weight" 
                   name="weight"
