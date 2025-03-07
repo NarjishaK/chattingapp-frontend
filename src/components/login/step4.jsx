@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { registerUser } from "../Redux/slices/authSlice";
 import Stepper from "./stepper";
+import { registerUser } from "../Redux/handle-api";
 
 const Step4 = () => {
   const dispatch = useDispatch();
