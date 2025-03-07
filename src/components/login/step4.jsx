@@ -20,16 +20,26 @@ const Step4 = () => {
     company: userData.company || "",
     financialStatus: userData.financialStatus || "",
     about: userData.about || "",
+    image: null, // Initialize as null
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    const { name, value, type, files } = e.target;
+    
+    if (type === "file") {
+      setFormData({ ...formData, [name]: files[0] });
+    } else {
+      setFormData({ ...formData, [name]: value });
+    }
   };
-
-  const handleSubmit = (e) => {
+   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Combine all form data and submit to the server
+    
+    const formDataToSend = new FormData();
+    Object.keys(formData).forEach((key) => {
+      formDataToSend.append(key, formData[key]);
+    });
+
     const finalUserData = {
       ...userData,
       ...formData
@@ -186,6 +196,20 @@ const Step4 = () => {
               required
             />
           </div>
+
+          <div className="input-group mb-20">
+            <span className="input-group-text">
+              <i className="fa-regular fa-link"></i>
+            </span>
+            <input 
+              type="file" 
+              className="form-control" 
+              name="image"
+              onChange={handleChange}
+              accept="image/*"
+            />
+          </div>
+
 
           {error && <p style={{ color: "red" }}>{error}</p>}
           <button 
