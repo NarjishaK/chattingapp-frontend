@@ -1,26 +1,20 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createSlice } from '@reduxjs/toolkit';
+import { registerUser,fetchUsers } from '../handle-api';
 
-// Async function to handle registration
-export const registerUser = createAsyncThunk('auth/registerUser', async (userData, { rejectWithValue }) => {
-  try {
-    const response = await axios.post('http://localhost:5002/users', userData);
-    return response.data;
-  } catch (error) {
-    return rejectWithValue(error.response.data);
-  }
-});
 
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
     user: null,
+    users: [], // Store fetched users
     loading: false,
     error: null,
   },
   reducers: {},
   extraReducers: (builder) => {
     builder
+
+    // register user
       .addCase(registerUser.pending, (state) => {
         state.loading = true;
       })
@@ -29,6 +23,19 @@ const authSlice = createSlice({
         state.user = action.payload;
       })
       .addCase(registerUser.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+
+      // fetch users
+      .addCase(fetchUsers.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(fetchUsers.fulfilled, (state, action) => {
+        state.loading = false;
+        state.users = action.payload;
+      })
+      .addCase(fetchUsers.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       });
