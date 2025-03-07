@@ -8,7 +8,20 @@ const Step1 = ({ nextStep }) => {
   const dispatch = useDispatch();
   const { loading, error } = useSelector((state) => state.auth);
   const userData = useSelector((state) => state.user.userData);
-  
+  const [errors, setErrors] = useState({});
+
+  //validation
+  const validateField = (name, value) => {
+    let errorMessage = "";
+    if (!value) {
+      errorMessage = `${name} is required`;
+    } else {
+      if (name === "phone" && !/^\d{10}$/.test(value)) {
+        errorMessage = "Phone number must be 10 digits";
+      }
+    }
+    return errorMessage;
+  };
   const [formData, setFormData] = useState({
     profileFor: userData.profileFor || "",
     name: userData.name || "",
@@ -19,14 +32,36 @@ const Step1 = ({ nextStep }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+     // Validate field in real-time
+     setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: validateField(name, value),
+    }));
   };
 
   const handleGenderChange = (gender) => {
     setFormData({ ...formData, gender });
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      gender: gender ? "" : "Gender is required",
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const newErrors = {};
+    Object.keys(formData).forEach((key) => {
+      const error = validateField(key, formData[key]);
+      if (error) newErrors[key] = error;
+    });
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+
     // Save form data to Redux store
     dispatch(setUser({ ...userData, ...formData }));
     nextStep();
@@ -70,6 +105,8 @@ const Step1 = ({ nextStep }) => {
               </div>
             </div>
           </div>
+          {errors.gender && <p className="text-danger">{errors.gender}</p>}
+
           <br />
           <div className="input-group mb-25">
             <span className="input-group-text"><i className="fa-regular fa-user"></i></span>
@@ -85,6 +122,8 @@ const Step1 = ({ nextStep }) => {
               <option value="parent">Parent</option>
             </select>
           </div>
+          {errors.profileFor && <p className="text-danger">{errors.profileFor}</p>}
+
 
           <div className="input-group mb-25">
             <span className="input-group-text"><i className="fa-regular fa-user"></i></span>
@@ -98,6 +137,7 @@ const Step1 = ({ nextStep }) => {
               required
             />
           </div>
+          {errors.name && <p className="text-danger">{errors.name}</p>}
 
           <div className="input-group mb-20">
             <span className="input-group-text"><i className="fa-regular fa-phone"></i></span>
@@ -111,6 +151,7 @@ const Step1 = ({ nextStep }) => {
               required
             />
           </div>
+          {errors.phone && <p className="text-danger">{errors.phone}</p>}
 
           {error && <p style={{ color: "red" }}>{error}</p>}
           <button 

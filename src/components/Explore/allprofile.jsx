@@ -3,56 +3,74 @@ import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardText, MDBCardBody, MDBCar
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers } from '../Redux/handle-api';
 
-
-
-
 export default function ECommerce() {
   const dispatch = useDispatch();
-const { users, loading, error } = useSelector((state) => state.auth);
+  const { users, loading, error } = useSelector((state) => state.auth);
 
-useEffect(() => {
-  dispatch(fetchUsers());
-}, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchUsers());
+  }, [dispatch]);
+
   return (
-    <div className="py-5" style={{ backgroundColor: '#eee' }}>
+    <div className="py-5" >
       {loading && <p>Loading users...</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <MDBContainer>
         <MDBRow className="g-4">
           {users.map((user, index) => (
-            <MDBCol key={index} md="6" lg="4">
-              <MDBCard style={{ borderRadius: '15px', backgroundColor: '#b0c391' }}>
-                <MDBCardBody className="p-4 text-black">
-                  <div>
-                    <MDBTypography tag='h6'>{user.userId}</MDBTypography>
-                    <div className="d-flex align-items-center justify-content-between mb-3">
-                      <p className="small mb-0"><MDBIcon far icon="clock me-2" /> {user.state || "Unknown"}</p>
-                    </div>
+            <MDBCol key={index} md="4" lg="4" xl="3">
+              <MDBCard
+                className="shadow-sm border-0 rounded-3"
+                style={{
+                  backgroundColor: '#ffffff',
+                  transition: 'transform 0.3s ease',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+                onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+              >
+                <MDBCardBody className="p-4 text-dark">
+                  <div className="d-flex justify-content-between align-items-center">
+                    <MDBTypography tag="h6" className="text-uppercase text-muted">
+                      {user.userId}
+                    </MDBTypography>
                   </div>
-                  <div className="d-flex align-items-center mb-4">
-                    <div className="flex-shrink-0">
-                      <MDBCardImage
-                        style={{ width: '70px' }}
-                        className="img-fluid rounded-circle border border-dark border-3"
-                        src={user.image ||"https://www.w3schools.com/w3images/avatar2.png"}
-                        alt='Profile'
-                        fluid />
-                    </div>
-                    <div className="flex-grow-1 ms-3">
-                      <div className="d-flex flex-row align-items-center mb-2">
-                        <p className="mb-0 me-2">@{user.name}</p>
-                        
-                      </div>
-                      <div>
-                        <button  className="btn btn-primary btn-sm" style={{ backgroundColor: 'black' }}>+ Follow</button>
-                        {/* <MDBBtn outline color="dark" rounded size="sm">See profile</MDBBtn> */}
-                        <button  className="btn btn-primary btn-sm" style={{ backgroundColor: 'black' }}>Message <MDBIcon fas icon="comment" /></button>
-                      </div>
+                  <div className="d-flex align-items-center my-3">
+                    <MDBCardImage
+                      style={{ width: '70px', height: '70px' }}
+                      className="img-fluid rounded-circle border border-3"
+                      src={user.image || 'https://www.w3schools.com/w3images/avatar2.png'}
+                      alt="Profile"
+                    />
+                    <div className="ms-3">
+                      <p className="mb-1">
+                        <strong>@{user.name}</strong>
+                      </p>
+                      <button
+                        color="dark"
+                        size="sm"
+                        className="me-2"
+                        style={{ borderRadius: '20px', fontSize: '12px',width:'100px',height:'30px',backgroundColor:'black',color:'white' }}
+                      >
+                        + Follow
+                      </button>
                     </div>
                   </div>
                   <hr />
-                  <button className="btn btn-primary btn-sm" style={{ backgroundColor: 'green',width:"100%" }}>
-                    <MDBIcon far icon="clock me-2" /> View Now
+                  <button
+                    color="success"
+                    size="sm"
+                    className="w-100"
+                    style={{
+                      backgroundColor: '#28a745',
+                      borderRadius: '20px',
+                      fontSize: '14px',
+                      width: '100%',
+                      height: '33px',
+                      color: 'white',
+                      border: 'none',
+                    }}
+                  >
+                    <MDBIcon far icon="message me-2" /> Message
                   </button>
                 </MDBCardBody>
               </MDBCard>
